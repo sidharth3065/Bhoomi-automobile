@@ -48,15 +48,7 @@ if (track && prevBtn && nextBtn && dotsContainer) {
 
   const createDots = () => {
     dotsContainer.innerHTML = '';
-    // We want dots roughly corresponding to pages or logical groups
-    // Simple approach: 1 dot per possible start index? Or 1 dot per slide? 
-    // Let's do 1 dot per slide, but that might be many. 
-    // Let's do 1 dot for every 'page' of content.
-    // Actually, common pattern: 1 dot per item, creating navigation to that item order.
-    // For 6 items, 6 dots is fine.
-    
-    // Better UX: Show dots for the number of available "Scroll stops".
-    // 0 to maxIndex
+  
     const dotCount = maxIndex + 1;
 
     for (let i = 0; i < dotCount; i++) {
