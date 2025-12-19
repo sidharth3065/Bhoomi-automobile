@@ -8,7 +8,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: 'index.html',
+        main: 'home.html',
         about: 'about.html',
         vehicles: 'vehicles.html',
         gallery: 'gallery.html',
