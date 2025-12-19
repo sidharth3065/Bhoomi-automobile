@@ -4,6 +4,17 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [
     tailwindcss(),
+    {
+      name: 'rewrite-root-to-home',
+      configureServer(server) {
+        server.middlewares.use((req, res, next) => {
+          if (req.url === '/') {
+            req.url = '/home.html'
+          }
+          next()
+        })
+      }
+    },
   ],
   build: {
     rollupOptions: {
